@@ -26,8 +26,9 @@ with open(file) as fp:
                 the_line += text
             
             the_line = re.sub(shark_pattern, '', the_line)
-            print(the_line)
-            fp_out.write(the_line)  
+            #print(the_line)
+            fp_out.write(the_line[: -1])  
+            fp_out.write(' ')  
         
 fp_out.close() 
         
